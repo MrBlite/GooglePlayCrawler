@@ -4,15 +4,24 @@ from GooglePlay.items import GoogleplayItem
 from scrapy.spiders import Rule, CrawlSpider
 from scrapy.selector import Selector
 import re
+import json
 
 class AppSpider(CrawlSpider):
     name = "App"
     allowed_domains = ["play.google.com"]
-    start_urls = [
-        'http://play.google.com/store/apps'
+
+    with open('category.json') as file:
+        content=json.load(file)
+        urls=[]
+        for it in content:
+            urls.append(it['url'])
+
+    start_urls = urls
+    # [
+        # 'http://play.google.com/store/apps'
         # 'https://play.google.com/store/apps/details?id=air.net.machinarium.Machinarium.GP'
         # 'https://play.google.com/store/apps/details?id=com.hasbro.mlpcoreAPPSTORE'
-    ]
+    # ]
  
     rules =( 
         Rule(LinkExtractor(allow=("/store/apps/details", )), callback = 'parse_item', follow = True),

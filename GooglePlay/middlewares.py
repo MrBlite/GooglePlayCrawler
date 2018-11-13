@@ -6,7 +6,7 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+import requests
 import random
 import base64
 # from settings import PROXIES
@@ -25,6 +25,15 @@ class RandomUserAgent(object):
     def process_request(self, request, spider):
         #print "**************************" + random.choice(self.agents)
         request.headers.setdefault('User-Agent', random.choice(self.agents))
+
+        # Start your middleware class
+class ProxyMiddleware(object):
+    # overwrite process request
+    def process_request(self, request, spider):
+        request.meta['proxy'] = 'http://198.13.50.193:3128'
+        # user_pass=''
+        # encoded_user_pass = base64.encodestring(user_pass)
+        # request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
 
 class GoogleplaySpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,

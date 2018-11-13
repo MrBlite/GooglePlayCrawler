@@ -21,11 +21,11 @@ NEWSPIDER_MODULE = 'GooglePlay.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
-LOG_LEVEL = 'WARNING'
+LOG_LEVEL = 'INFO'
 LOG_FILE = 'GooglePlay.log'
 # CRITICAL,ERROR,WARNING,INFO and DEBUG
 MONGO_URI='45.63.52.40:27017'
-MONGO_URI='127.0.0.1:27017'
+# MONGO_URI='127.0.0.1:27017'
 # MONGODB_HOST= '198.13.50.193'
 MONGODB_PORT = 27017
 MONGODB_DBNAME= 'GooglePlay'
@@ -59,6 +59,7 @@ COOKIES_ENABLED=False
 DOWNLOADER_MIDDLEWARES = {
 #    'cnblogs.middlewares.MyCustomDownloaderMiddleware': 543,
     'GooglePlay.middlewares.RandomUserAgent': 1,
+    # 'GooglePlay.middlewares.ProxyMiddleware': 2,
 }
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
