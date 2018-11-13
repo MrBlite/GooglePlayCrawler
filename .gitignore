@@ -1,2 +1,3 @@
 GooglePlay/__pycache__
 GooglePlay/spiders/__pycache__
+*.log
