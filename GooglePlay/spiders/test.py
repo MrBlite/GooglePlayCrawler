@@ -9,9 +9,9 @@ class AppSpider(CrawlSpider):
     name = "App"
     allowed_domains = ["play.google.com"]
     start_urls = [
-        # 'http://play.google.com/store/apps'
+        'http://play.google.com/store/apps'
         # 'https://play.google.com/store/apps/details?id=air.net.machinarium.Machinarium.GP'
-        'https://play.google.com/store/apps/details?id=com.hasbro.mlpcoreAPPSTORE'
+        # 'https://play.google.com/store/apps/details?id=com.hasbro.mlpcoreAPPSTORE'
     ]
  
     rules =( 
