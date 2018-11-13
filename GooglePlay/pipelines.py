@@ -33,7 +33,7 @@ class GoogleplayPipeline(object):
 
     def process_item(self, item, spider):
         self.db[self.collection_name].insert(dict(item))
-        print('----------------------插入数据')
+        # print('----------------------插入数据')
         return item
 
     # def __init__(self):
