@@ -9,9 +9,9 @@ class AppSpider(CrawlSpider):
     name = "App"
     allowed_domains = ["play.google.com"]
     start_urls = [
-        'http://play.google.com/store/apps'
+        # 'http://play.google.com/store/apps'
         # 'https://play.google.com/store/apps/details?id=air.net.machinarium.Machinarium.GP'
-        # 'https://play.google.com/store/apps/details?id=com.hasbro.mlpcoreAPPSTORE'
+        'https://play.google.com/store/apps/details?id=com.hasbro.mlpcoreAPPSTORE'
     ]
  
     rules =( 
@@ -27,12 +27,17 @@ class AppSpider(CrawlSpider):
         # print(grp)
         item["inc"] = grp[0]
         item["category"] = grp[1:]
-        item["intro"] = response.css('.PHBdkd > div > content > div::text').extract_first()
-        reviewNum = response.css('.EymY4b > span::text').extract_first()
-        reviewNum=re.sub(r'\D', '', reviewNum)
-        item["reviewNum"] = reviewNum
-        item["score"] = response.css('.BHMmbe::text').extract_first()
-        item["downloadNum"] = response.css('div.hAyfc:nth-child(3) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1)::text').extract_first()
- 
+        item["intro"] = response.css('.PHBdkd > div > content > div::text').extract()
+        # print(item["intro"])
+        try:
+            reviewNum = response.css('.EymY4b > span::text').extract_first()
+            reviewNum=re.sub(r'\D', '', reviewNum)
+            item["reviewNum"] = reviewNum
+            item["score"] = response.css('.BHMmbe::text').extract_first()
+            item["downloadNum"] = response.css('div.hAyfc:nth-child(3) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1)::text').extract_first()
+        except:
+            item["reviewNum"]='0'
+            item["score"]='0'
+            item["downloadNum"]='0'
         yield item
  

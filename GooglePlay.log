@@ -1,0 +1,148 @@
+2018-11-13 15:37:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://play.google.com/store/apps/details?id=com.ubisoft.accovenant> (referer: https://play.google.com/store/apps/details?id=com.ubisoft.assassinscreed.identity)
+Traceback (most recent call last):
+  File "e:\program\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "D:\AppData\desktop\GooglePlay\GooglePlay\spiders\test.py", line 33, in parse_item
+    reviewNum=re.sub(r'\D', '', reviewNum)
+  File "e:\program\anaconda3\lib\re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+2018-11-13 15:37:25 [scrapy.core.scraper] ERROR: Spider error processing <GET https://play.google.com/store/apps/details?id=com.auer.diosa.force.rpg> (referer: https://play.google.com/store/apps/details?id=com.auer.dawnbreak.trial.single.player.free)
+Traceback (most recent call last):
+  File "e:\program\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "D:\AppData\desktop\GooglePlay\GooglePlay\spiders\test.py", line 33, in parse_item
+    reviewNum=re.sub(r'\D', '', reviewNum)
+  File "e:\program\anaconda3\lib\re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+2018-11-13 15:37:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.kwalee.wantedgp. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 15:37:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.zzoo.dokdo. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 15:37:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=net.elyland.wormaxio. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 15:37:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.ngame.allstar.eu. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 15:37:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.bdj.vortexDroid. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 15:51:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://play.google.com/store/apps/details?id=com.appon.kitchentycoon> (referer: https://play.google.com/store/apps/details?id=com.bubadu.bubburestaurant)
+Traceback (most recent call last):
+  File "e:\program\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "D:\AppData\desktop\GooglePlay\GooglePlay\spiders\test.py", line 36, in parse_item
+    reviewNum = re.sub(r'\D', '', reviewNum)
+  File "e:\program\anaconda3\lib\re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+2018-11-13 15:52:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://play.google.com/store/apps/details?id=com.tiramisu.driftmaxworld> (referer: https://play.google.com/store/apps/details?id=com.tiramisu.driftmax2)
+Traceback (most recent call last):
+  File "e:\program\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "D:\AppData\desktop\GooglePlay\GooglePlay\spiders\test.py", line 36, in parse_item
+    reviewNum = re.sub(r'\D', '', reviewNum)
+  File "e:\program\anaconda3\lib\re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+2018-11-13 15:52:26 [scrapy.core.scraper] ERROR: Spider error processing <GET https://play.google.com/store/apps/details?id=com.kishlayranjan7.Macys_Coupons> (referer: https://play.google.com/store/apps/details?id=com.kishlayranjan7.Michaels_Coupons)
+Traceback (most recent call last):
+  File "e:\program\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "D:\AppData\desktop\GooglePlay\GooglePlay\spiders\test.py", line 36, in parse_item
+    reviewNum = re.sub(r'\D', '', reviewNum)
+  File "e:\program\anaconda3\lib\re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+2018-11-13 15:52:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://play.google.com/store/apps/details?id=com.TwoGuns.DoubleGuns> (referer: https://play.google.com/store/apps/details?id=com.SliceIt.PhysicsPuzzles)
+Traceback (most recent call last):
+  File "e:\program\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "D:\AppData\desktop\GooglePlay\GooglePlay\spiders\test.py", line 36, in parse_item
+    reviewNum = re.sub(r'\D', '', reviewNum)
+  File "e:\program\anaconda3\lib\re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+2018-11-13 15:52:41 [scrapy.core.scraper] ERROR: Spider error processing <GET https://play.google.com/store/apps/details?id=com.roadrush.twocars> (referer: https://play.google.com/store/apps/details?id=com.supergame.ultrasharp.cutitdown)
+Traceback (most recent call last):
+  File "e:\program\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\program\anaconda3\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "D:\AppData\desktop\GooglePlay\GooglePlay\spiders\test.py", line 36, in parse_item
+    reviewNum = re.sub(r'\D', '', reviewNum)
+  File "e:\program\anaconda3\lib\re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+2018-11-13 15:54:27 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.azwstudios.theholybible.kjv. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 15:54:27 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.azwstudios.theholybible.em. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.finapp.connect. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.toddbrady.collegeFootballRadio. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=et.bazeni.masrejachin. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.westlandstorage.app. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.ethioroot.selfcare.ethioselfcare. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=et.bazeni.constitution. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=com.thanh.tamquoc.luuhuyenduc. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-11-13 16:06:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://play.google.com/store/apps/details?id=top.syfni.best. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
