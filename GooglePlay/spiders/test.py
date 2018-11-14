@@ -25,6 +25,7 @@ class AppSpider(CrawlSpider):
  
     rules =( 
         Rule(LinkExtractor(allow=("/store/apps/details", )), callback = 'parse_item', follow = True),
+        Rule(LinkExtractor(allow=("https://play.google.com/store/apps/collection/cluster", )), follow = True),
     )
  
     def parse_item(self, response):
