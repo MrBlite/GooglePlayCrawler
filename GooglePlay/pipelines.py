@@ -11,7 +11,7 @@ from scrapy.conf import settings
 
 class GoogleplayPipeline(object):
 
-    collection_name = 'AppByCategoryMore'
+    collection_name = 'AppByCategoryMoreSHU'
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
