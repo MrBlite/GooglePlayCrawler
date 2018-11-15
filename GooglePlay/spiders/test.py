@@ -48,6 +48,10 @@ class AppSpider(CrawlSpider):
             reviewNum = re.sub(r'\D', '', reviewNum)
             item["reviewNum"] = reviewNum
             item["score"] = response.css('.BHMmbe::text').extract_first()
+        except:
+            item["reviewNum"] = '0'
+            item["score"] = '0'
+        try:
             downloadNum = response.css(
                 'div.hAyfc:nth-child(3) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1)::text').extract_first()
             if downloadNum[-1] == '+':
@@ -56,7 +60,6 @@ class AppSpider(CrawlSpider):
                 item["downloadNum"] = response.css(
                     'div.hAyfc:nth-child(4) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1)::text').extract_first()
         except:
-            item["reviewNum"] = '0'
-            item["score"] = '0'
             item["downloadNum"] = '0'
+        
         yield item

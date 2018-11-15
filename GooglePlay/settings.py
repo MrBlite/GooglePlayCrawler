@@ -22,7 +22,7 @@ NEWSPIDER_MODULE = 'GooglePlay.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 LOG_LEVEL = 'INFO'
-LOG_FILE = 'AppByCategoryMore_4.log'
+# LOG_FILE = 'AppByCategoryMore_4.log'
 # CRITICAL,ERROR,WARNING,INFO and DEBUG
 # MONGO_URI='45.63.52.40:27017'
 MONGO_URI='127.0.0.1:27017'
@@ -84,7 +84,7 @@ DOWNLOADER_MIDDLEWARES = {
     # 'GooglePlay.middlewares.ProxyMiddleware': 2,
 }
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 64
+CONCURRENT_REQUESTS = 64
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
