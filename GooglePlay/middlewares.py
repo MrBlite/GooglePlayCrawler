@@ -30,7 +30,7 @@ class RandomUserAgent(object):
 class ProxyMiddleware(object):
     # overwrite process request
     def process_request(self, request, spider):
-        request.meta['proxy'] = 'http://198.13.50.193:3128'
+        request.meta['proxy'] = 'http://198.13.50.193:8888'
         # user_pass=''
         # encoded_user_pass = base64.encodestring(user_pass)
         # request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
