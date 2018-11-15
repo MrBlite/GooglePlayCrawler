@@ -22,7 +22,7 @@ NEWSPIDER_MODULE = 'GooglePlay.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 LOG_LEVEL = 'INFO'
-LOG_FILE = 'AppByCategoryMore_2.log'
+# LOG_FILE = 'AppByCategoryMore_3.log'
 # CRITICAL,ERROR,WARNING,INFO and DEBUG
 # MONGO_URI='45.63.52.40:27017'
 MONGO_URI='127.0.0.1:27017'
@@ -55,25 +55,25 @@ USER_AGENTS = [
     "Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52",
 ]
 COOKIES_ENABLED=False
-# DOWNLOAD_DELAY=1
+DOWNLOAD_DELAY=0
 DOWNLOADER_MIDDLEWARES = {
 #    'cnblogs.middlewares.MyCustomDownloaderMiddleware': 543,
     'GooglePlay.middlewares.RandomUserAgent': 1,
     # 'GooglePlay.middlewares.ProxyMiddleware': 2,
 }
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 64
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 #DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
-CONCURRENT_REQUESTS_PER_DOMAIN = 16
-CONCURRENT_REQUESTS_PER_IP = 16
+CONCURRENT_REQUESTS_PER_DOMAIN = 64
+CONCURRENT_REQUESTS_PER_IP = 64
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
