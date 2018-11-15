@@ -22,7 +22,7 @@ NEWSPIDER_MODULE = 'GooglePlay.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 LOG_LEVEL = 'INFO'
-# LOG_FILE = 'AppByCategoryMore_4.log'
+LOG_FILE = 'AppByCategoryMore_6.log'
 # CRITICAL,ERROR,WARNING,INFO and DEBUG
 # MONGO_URI='45.63.52.40:27017'
 MONGO_URI='127.0.0.1:27017'
@@ -35,6 +35,27 @@ ITEM_PIPELINES = {
     'GooglePlay.pipelines.GoogleplayPipeline': 1,
     # 'myproject.pipelines.JsonWriterPipeline': 800,
 }
+# 宽度优先
+SCHEDULER_ORDER = 'BFO'
+# Disable cookies (enabled by default)
+COOKIES_ENABLED=False
+DOWNLOAD_DELAY=0
+DOWNLOADER_MIDDLEWARES = {
+#    'cnblogs.middlewares.MyCustomDownloaderMiddleware': 543,
+    'GooglePlay.middlewares.RandomUserAgent': 1,
+    # 'GooglePlay.middlewares.ProxyMiddleware': 2,
+}
+# Configure maximum concurrent requests performed by Scrapy (default: 16)
+# CONCURRENT_REQUESTS = 8
+# The maximum number of concurrent (ie. simultaneous) requests that will be performed by the Scrapy downloader.100
+# CONCURRENT_ITEMS = 400
+# Configure a delay for requests for the same website (default: 0)
+# See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
+# See also autothrottle settings and docs
+#DOWNLOAD_DELAY = 3
+# The download delay setting will honor only one of:
+# CONCURRENT_REQUESTS_PER_DOMAIN = 32
+# CONCURRENT_REQUESTS_PER_IP = 64
 
 USER_AGENTS = [
     "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
@@ -76,27 +97,6 @@ USER_AGENTS = [
     'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.3 Mobile/14E277 Safari/603.1.30',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
 ]
-COOKIES_ENABLED=False
-DOWNLOAD_DELAY=0
-DOWNLOADER_MIDDLEWARES = {
-#    'cnblogs.middlewares.MyCustomDownloaderMiddleware': 543,
-    'GooglePlay.middlewares.RandomUserAgent': 1,
-    # 'GooglePlay.middlewares.ProxyMiddleware': 2,
-}
-# Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 8
-# The maximum number of concurrent (ie. simultaneous) requests that will be performed by the Scrapy downloader.100
-# CONCURRENT_ITEMS = 400
-# Configure a delay for requests for the same website (default: 0)
-# See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
-# See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
-# The download delay setting will honor only one of:
-# CONCURRENT_REQUESTS_PER_DOMAIN = 32
-# CONCURRENT_REQUESTS_PER_IP = 64
-
-# Disable cookies (enabled by default)
-COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
