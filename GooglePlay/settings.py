@@ -25,11 +25,11 @@ LOG_LEVEL = 'INFO'
 # LOG_FILE = 'AppByCategoryMore_6.log'
 # CRITICAL,ERROR,WARNING,INFO and DEBUG
 # MONGO_URI='45.63.52.40:27017'
-MONGO_URI='localhost:27017'
+MONGO_URI='198.13.50.193:27017'
 # MONGODB_HOST= '198.13.50.193'
 MONGODB_PORT = 27017
 MONGODB_DBNAME= 'GooglePlay'
-MONGODB_DOCNAME= 'Apps'
+collection_name= 'Apps1'
 
 ITEM_PIPELINES = {
     'GooglePlay.pipelines.GoogleplayPipeline': 1,
