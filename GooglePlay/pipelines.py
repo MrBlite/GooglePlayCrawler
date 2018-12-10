@@ -11,19 +11,18 @@ from scrapy.conf import settings
 
 class GoogleplayPipeline(object):
 
-    # collection_name = 'AppByCategoryMore_6'
+    # collection_name = 'app'
 
     def __init__(self, mongo_uri, mongo_db,collection_name):
         self.mongo_uri = mongo_uri
         self.mongo_db = mongo_db
-        self.collection_name = collection_name
-
+        self.collection_name=collection_name
     @classmethod
     def from_crawler(cls, crawler):
         return cls(
             mongo_uri=crawler.settings.get('MONGO_URI'),
             mongo_db=crawler.settings.get('MONGODB_DBNAME', 'items'),
-            collection_name=crawler.settings.get('collection_name')
+            collection_name=crawler.settings.get('COLLECTION_NAME')
         )
 
     def open_spider(self, spider):

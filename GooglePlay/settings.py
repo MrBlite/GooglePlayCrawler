@@ -29,7 +29,8 @@ MONGO_URI='198.13.50.193:27017'
 # MONGODB_HOST= '198.13.50.193'
 MONGODB_PORT = 27017
 MONGODB_DBNAME= 'GooglePlay'
-collection_name= 'Apps1'
+COLLECTION_NAME= 'Apps'
+
 
 ITEM_PIPELINES = {
     'GooglePlay.pipelines.GoogleplayPipeline': 1,
